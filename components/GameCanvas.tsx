@@ -417,24 +417,24 @@ export const GameCanvas: React.FC<Props> = ({ gameState, onScoreUpdate }) => {
   }, [gameState.status]);
 
   return (
-    // RWD Container: Maintains aspect ratio but fits within parent container
+    // Changed: Simple fill container that respects aspect ratio via logic or padding
     <div 
       ref={containerRef}
-      className="relative w-full h-full max-h-[85vh] aspect-[4/7] mx-auto rounded-xl overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.8)] border-4 border-slate-700 bg-slate-950"
+      className="relative w-full h-full flex items-center justify-center bg-slate-950"
       style={{ touchAction: 'none' }}
     >
       <canvas
         ref={canvasRef}
         width={CANVAS_WIDTH}
         height={CANVAS_HEIGHT}
-        className="w-full h-full block cursor-none touch-none"
+        className="block max-w-full max-h-full aspect-[4/7] cursor-none touch-none bg-slate-900 shadow-xl"
         onTouchMove={handleTouch}
         onTouchStart={handleTouch}
         onMouseMove={handleMouse}
         onMouseDown={handleMouse}
       />
       
-      {/* Decorative Text */}
+      {/* Decorative Text Inside Canvas Area */}
       <div className="absolute top-[35%] left-0 right-0 text-center pointer-events-none opacity-20 font-black text-4xl tracking-widest text-[#00f0ff] rotate-180">
         CPU
       </div>
