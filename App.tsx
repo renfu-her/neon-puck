@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useCallback } from 'react';
 import { GameCanvas } from './components/GameCanvas';
 import { CountdownOverlay } from './components/CountdownOverlay';
@@ -142,7 +141,7 @@ export default function App() {
             </>
           ) : (
              <div className="w-full text-center">
-                <span className="text-slate-500 text-xs font-bold tracking-[0.3em] uppercase">Neon Air Hockey</span>
+                <span className="text-slate-500 text-xs font-bold tracking-[0.3em] uppercase">Air Hockey</span>
              </div>
           )}
         </div>
@@ -156,7 +155,7 @@ export default function App() {
               <div className="w-full max-w-xs">
                 <div className="text-center mb-10">
                   <h1 className="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-br from-white to-slate-400 mb-2 italic tracking-tighter">
-                    NEON<span className="text-[#ff003c]">PUCK</span>
+                    AIR<span className="text-[#ff003c] pl-2">HOCKEY</span>
                   </h1>
                   <p className="text-slate-400 font-medium text-xs uppercase tracking-widest">Mobile Edition</p>
                 </div>
